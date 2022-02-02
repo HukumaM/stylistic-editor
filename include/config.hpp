@@ -75,54 +75,24 @@ struct config final
             if (!std::strcmp("-cin", argv[index]))
             {
                 set_flag(io_mode::cin);
-
-                //  mode |= io_mode::cin;
             }
             else if (!std::strncmp("-ifstream=", argv[index], 10UL))
             {
                 set_flag(io_mode::ifstream);
                 set_path_to_read(std::string(argv[index]).substr(10UL));
-
-                //  mode |= io_mode::ifstream;
-                //  path_in = std::string(argv[index]).substr(10UL);
             }
             else if (!std::strcmp("-cout", argv[index]))
             {
                 set_flag(io_mode::cout);
-
-                //  mode |= io_mode::cout;
             }
             else if (!std::strncmp("-ofstream=", argv[index], 10UL))
             {
                 set_flag(io_mode::ofstream);
                 set_path_to_write(std::string(argv[index]).substr(10UL));
-
-                //  mode |= io_mode::ofstream;
-                //  path_out = std::string(argv[index]).substr(10UL);
             }
         }
 
         evaluation_of_flags();
-
-        // switch (mode)
-        // {
-        // case io_mode::error:
-        //     throw std::runtime_error("For the program to work, you must "
-        //                              "specify the input and output stream.");
-        //     break;
-        // case (io_mode::cin | io_mode::ifstream):
-        //     throw std::runtime_error("It is not possible to open a stream for "
-        //                              "reading from cin and ifstream at the "
-        //                              "same time.");
-        //     break;
-        // case (io_mode::cout | io_mode::ofstream):
-        //     throw std::runtime_error("It is not possible to open a stream for "
-        //                              "writing to cout and ofstream at the same"
-        //                              " time.");
-        //     break;
-        // default:
-        //     break;
-        // }
     }
 
 private:
