@@ -1,0 +1,10 @@
+Auxiliary stylistic editor for searching long
+sentences in texts using std::multimap.
+
+The tool will help various authors of texts
+analyze their files written in English, based
+on the length of all sentences. To help the
+author improve his style, the program will
+group sentences by length. Thus, the author
+will be able to select the longest sentences
+and break them into parts. 
